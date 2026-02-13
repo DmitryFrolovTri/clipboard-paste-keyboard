@@ -5,7 +5,7 @@
 
 ## Summary
 
-`clipboard-paste-keyboard` is a cross-platform command-line tool to write clipboard content using the keyboard. It can be used to write the clipboard content through RDS, or any software that disable pasting (Ctrl + V).
+`clipboard-paste-keyboard` is a cross-platform command-line tool to write clipboard content using the keyboard. It can be used to write the clipboard content through RDS, or any software that disables pasting (Ctrl + V). On X11 and Wayland should also be able to paste international (UTF-8 characters).
 
 ## Platforms
 
@@ -15,7 +15,10 @@
 
 ## Requirements
 
-Linux and Unix platforms requires 'xclip' or 'xsel' command to be installed.
+Linux and Unix platforms requires following commands to be installed:
+- `xclip`, `xsel` - "the fallback way" - doesn't support international and UTF-8 characters 
+- `xdotool` - if you are running X11, supports international and UTF-8 characters
+- `wtype` - if you are running Wayland, supports international and UTF-8 characters
 
 ## How to use
 
